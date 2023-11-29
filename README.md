@@ -22,6 +22,7 @@ Yes, it's free. Please keep it that way do not try to resell it. If you want to 
 
 ## Why is it named KeyJerk Reactions?
 It's a play on words with the phrase "knee jerk reaction." A knee-jerk reaction is a quick, unthinking, reaction you have to something. "Knee" was changed to "Key" because you can use the keyboard to initiate a macOS Reaction. Clearly, I'm very clever. 😉
+<BR><BR>
 
 ## Modifying the Script
 Let's say you want to create separate hot keys in Keyboard Maestro for each reaction, or map specific reactions to different buttons on your Stream Deck and therefore don't want the initial prompt to select a reaction. In such a case, all you need to do is extract portions of the script and create a new script using Script Editor (found in /Applications/Utilities). For example, if you wanted a script to execute the Hearts reactions without any prompting, you would create a new script with the following parts extracted from the full script:
