@@ -1,4 +1,4 @@
-# KeyJerk-Reactions
+# KeyJerk Reactions
 
 ## What & Why is KeyJerk Reactions?
 Reactions in macOS are buried in the menu bar. Timing is everything. If you have to 1) click the Audio & Video menu bar item, 2) click Reactions, and 3) click the reaction you want to use, the effect may be lost as your reaction time was too long.
