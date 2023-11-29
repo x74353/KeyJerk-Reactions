@@ -21,7 +21,7 @@ Yes, it's free. Please keep it that way do not try to resell it. If you want to 
 <BR><BR>
 
 ## Why is it named KeyJerk Reactions?
-It's a play on words with the phrase "knee jerk reaction." A knee-jerk reaction is a quick, unthinking, reaction you have to something. "Knee" was changed to "Key" because you can use the keyboard to initiate a macOS Reaction. Clearly, I'm very clever. 😉
+It's a play on words with the phrase "knee-jerk reaction." A knee-jerk reaction is a quick, unthinking, reaction you have to something. "Knee" was changed to "Key" because you can use the keyboard to initiate a macOS Reaction using the script. Clearly, I'm very clever. 😉
 <BR><BR>
 
 ## Modifying the Script
