@@ -3,11 +3,11 @@
 ## What & Why is KeyJerk Reactions?
 Reactions in macOS are buried in the menu bar. Timing is everything. If you have to 1) click the Audio & Video menu bar item, 2) click Reactions, and 3) click the reaction you want to use, the effect may be lost as your reaction time was too long.
 
-KeyJerk Reactions is a straight forward AppleScript that, upon execution, will prompt you to select a reaction and then, using UI scripting, will quickly perform steps 1, 2, & 3 for you.
+KeyJerk Reactions is an AppleScript that, upon execution, will prompt you to select a reaction and then, using UI scripting, will quickly perform steps 1, 2, & 3 for you.
 <BR><BR>
 
 ## How to Download KeyJerk Reactions?
-[Click here](https://github.com/x74353/KeyJerk-Reactions/raw/main/KeyJerk%20Reactions.scpt) to download the script
+[Click here](https://github.com/x74353/KeyJerk-Reactions/raw/main/KeyJerk%20Reactions.scpt) to download the AppleScript.
 <BR><BR>
 
 ## How to Use KeyJerk Reactions?
