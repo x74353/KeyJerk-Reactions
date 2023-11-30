@@ -7,7 +7,7 @@ KeyJerk Reactions is an AppleScript that, upon execution, will prompt you to sel
 
 ### Requirements 
 • macOS Sonoma<BR>
-• An app running on your Mac that causes the Audio and Video Controls menu bar item:<BR>
+• An app running on your Mac that causes the Audio and Video Controls menu bar item to appear:<BR>
 ![alt text](https://raw.githubusercontent.com/x74353/KeyJerk-Reactions/main/images/VideoMenuBarIcon.png)
 <BR>
 
@@ -18,11 +18,11 @@ KeyJerk Reactions is an AppleScript that, upon execution, will prompt you to sel
 ## How to Use KeyJerk Reactions?
 This script can be used in multiple ways. If you have an app like Keyboard Maestro, you can configure a macro to run the script when a global hot key is pressed. If you have a Stream Deck, you can use a plug-in to run the script when pressing a button on the Stream Deck.
 
-_Note: For this script or an app that executes this script to work, you'll need to ensure the proper Accessibility permissions are set in  → System Settings → Privacy & Security → Accessibility._
+_Note: For this script (or an app that executes this script) to work, you'll need to ensure the proper Accessibility permissions are set in  → System Settings → Privacy & Security → Accessibility._
 <BR><BR>
 
 ## Is KeyJerk Reactions Free?
-Yes, it's free. Please keep it that way do not try to resell it. If you want to show your appreciation and give a financial gift to me, you can do so [here](http://buymeacoffee.com/x74353).
+Yes, it's free. Please keep it that way and do not try to resell it. If you want to show your appreciation and give a financial gift to me, you can do so [here](http://buymeacoffee.com/x74353).
 <BR><BR>
 
 ## Why is it named KeyJerk Reactions?
