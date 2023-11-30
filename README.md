@@ -39,7 +39,7 @@ set reaction to 1
 set reactionGroup to 1
 ```
 
-So, if you wanted a script to execute the Hearts reactions without any prompting, you would create a new script with the following parts extracted from the full script:
+So, if you wanted a script to execute the Hearts reactions without any prompting, you would create a new script with the following parts extracted from the full script (code comments removed in this example):
 
 ```
 set reaction to 1
@@ -55,17 +55,42 @@ tell application "System Events"
 				
 				if description of menuBarItem is "Audio and Video Controls" then
 					
-					-- CLICK THE "Audio and Video Controls" MENU BAR ITEM
 					click menuBarItem
-					set timeoutSeconds to 2.0
-					set uiScript to "click UI Element 2 of group 4 of group 1 of window \"Control Center\" of application process \"Control Center\""
-					my doWithTimeout(uiScript, timeoutSeconds)
+					
+					set uiElementGroup to 1
+					
+					try
+						tell application "System Events"
+							click UI element 2 of group 1 of group 1 of window "Control Center" of application process "Control Center"
+						end tell
+					end try
+					
+					try
+						tell application "System Events"
+							click UI element 2 of group 2 of group 1 of window "Control Center" of application process "Control Center"
+							set uiElementGroup to 2
+						end tell
+					end try
+					
+					try
+						tell application "System Events"
+							click UI element 2 of group 3 of group 1 of window "Control Center" of application process "Control Center"
+							set uiElementGroup to 3
+						end tell
+					end try
+					
+					try
+						tell application "System Events"
+							click UI element 2 of group 4 of group 1 of window "Control Center" of application process "Control Center"
+							set uiElementGroup to 4
+						end tell
+					end try
 					
 					delay 0.1
 					
-					-- CLICK THE REACTIONS UI ELEMENT
-					set uiScript to "click UI Element " & reaction & " of group " & reactionGroup & " of group 4 of group 1 of window \"Control Center\" of application process \"Control Center\""
-					my doWithTimeout(uiScript, timeoutSeconds)
+					tell application "System Events"
+						click UI element reaction of group reactionGroup of group uiElementGroup of group 1 of window "Control Center" of application process "Control Center"
+					end tell
 					
 					delay 0.1
 					
@@ -82,22 +107,6 @@ tell application "System Events"
 	end tell
 	
 end tell
-
-on doWithTimeout(uiScript, timeoutSeconds)
-	set endDate to (current date) + timeoutSeconds
-	repeat
-		try
-			run script "tell application \"System Events\"
-" & uiScript & "
-end tell"
-			exit repeat
-		on error errorMessage
-			if ((current date) > endDate) then
-				error "Can not " & uiScript
-			end if
-		end try
-	end repeat
-end doWithTimeout
 ```
 
 
