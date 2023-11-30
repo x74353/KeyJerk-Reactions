@@ -25,7 +25,16 @@ It's a play on words with the phrase "knee-jerk reaction." A knee-jerk reaction 
 <BR><BR>
 
 ## Modifying the Script
-Let's say you want to create separate hot keys in Keyboard Maestro for each reaction, or map specific reactions to different buttons on your Stream Deck and therefore don't want the initial prompt to select a reaction. In such a case, all you need to do is extract portions of the script and create a new script using Script Editor (found in /Applications/Utilities). For example, if you wanted a script to execute the Hearts reactions without any prompting, you would create a new script with the following parts extracted from the full script:
+Let's say you want to create separate hot keys in Keyboard Maestro for each reaction, or map specific reactions to different buttons on your Stream Deck and therefore don't want the initial prompt to select a reaction. In such a case, all you need to do is extract portions of the script and create a new script using Script Editor (found in /Applications/Utilities). 
+
+In the original script, find the variables named "reaction" and "reactionGroup" for the reaction you want. For example, the hearts reaction is:
+
+```
+set reaction to 1
+set reactionGroup to 1
+```
+
+So, if you wanted a script to execute the Hearts reactions without any prompting, you would create a new script with the following parts extracted from the full script:
 
 ```
 set reaction to 1
