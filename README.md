@@ -1,9 +1,13 @@
 # KeyJerk Reactions
 
 ## What & Why is KeyJerk Reactions?
-Reactions in macOS are buried in the menu bar. Timing is everything. If you have to 1) click the Audio & Video menu bar item, 2) click Reactions, and 3) click the reaction you want to use, the effect may be lost as your reaction time was too long.
+Reactions in macOS are buried in the menu bar. Timing is everything. If you have to 1) click the Audio & Video Control menu bar item, 2) click Reactions, and 3) click the reaction you want to use, the effect may be lost as your reaction time was too long.
 
-KeyJerk Reactions is an AppleScript that, upon execution, will prompt you to select a reaction and then, using UI scripting, will quickly perform steps 1, 2, & 3 for you.
+There are two versions of KeyJerk Reactions. One version is a full-fledged app which runs from the macOS menu bar. The other version is an AppleScript that you can use in conjuntion with other software or hardware, such as Keyboard Maestro or Stream Deck. See more information about how to use the KeyJerk Reactions script below.
+
+In either version KeyJerk Reactions uses AppleScript's UI scripting to quickly perform steps 1, 2, & 3 for you. In the app version, you can assign individual system-wide hot keys for each reaction. KeyJerk Reactions can also prompt you each time to select a reaction via hot key.
+
+![alt text](https://raw.githubusercontent.com/x74353/KeyJerk-Reactions/main/images/KeyJerkReactions_Prompt.png)
 
 ### Requirements 
 • macOS Sonoma<BR>
@@ -12,21 +16,17 @@ KeyJerk Reactions is an AppleScript that, upon execution, will prompt you to sel
 <BR>
 
 ## How to Download KeyJerk Reactions?
-[Click here](https://github.com/x74353/KeyJerk-Reactions/raw/main/KeyJerk%20Reactions.scpt) to download the AppleScript.
+### App Version
+[Click here](https://github.com/x74353/KeyJerk-Reactions/raw/main/DMG/KeyJerk%20Reactions.dmg) to download the full app's disk image.
+
+### Script Version
+[Click here](https://github.com/x74353/KeyJerk-Reactions/raw/main/KeyJerk%20Reactions.scpt) to download the AppleScript only.
 <BR><BR>
 
-## How to Use KeyJerk Reactions?
+## How to Use the KeyJerk Reactions Script?
 This script can be used in multiple ways. If you have an app like Keyboard Maestro, you can configure a macro to run the script when a global hot key is pressed. If you have a Stream Deck, you can use a plug-in to run the script when pressing a button on the Stream Deck.
 
 _Note: For this script (or an app that executes this script) to work, you'll need to ensure the proper Accessibility permissions are set in  → System Settings → Privacy & Security → Accessibility._
-<BR><BR>
-
-## Is KeyJerk Reactions Free?
-Yes, it's free. Please keep it that way and do not try to resell it. If you want to show your appreciation and give a financial gift to me, you can do so [here](http://buymeacoffee.com/x74353).
-<BR><BR>
-
-## Why is it named KeyJerk Reactions?
-It's a play on words with the phrase "knee-jerk reaction." A knee-jerk reaction is a quick, unthinking, reaction you have to something. "Knee" was changed to "Key" because you can use the keyboard to initiate a macOS Reaction using the script. Clearly, I'm very clever. 😉
 <BR><BR>
 
 ## Modifying the Script
@@ -45,26 +45,44 @@ So, if you wanted a script to execute the Hearts reactions without any prompting
 set reaction to 1
 set reactionGroup to 1
 
+set foundAudioVideoControlMenuBarItem to false
+
 tell application "System Events"
 	
 	tell its application process "ControlCenter"
 		
 		tell its menu bar 1
 			
+			-- FIND THE AUDIO AND VIDEO CONTROLS MENU BAR ITEM
 			repeat with menuBarItem in every menu bar item
 				
 				if description of menuBarItem is "Audio and Video Controls" then
 					
+					set foundAudioVideoControlMenuBarItem to true
+					
+					-- CLICK THE AUDIO AND VIDEO CONTROLS MENU BAR ITEM
 					click menuBarItem
+					
+					-- SET INITIAL VALUE FOR UI ELEMENT GROUP
+					-- DEPENDING ON WHAT KIND OF MAC/CAMERA IS CONNECTED, THERE MAY BE A DIFFERENT
+					-- NUMBER OF UI ELEMENTS IN THE THE AUDIO AND VIDEO CONTROLS MENU BAR ITEM
+					-- FOR EXAMPLE SOME CAMERAS SUPPORT CENTER STAGE AND PORTRAIT MODE WHILE OTHERS DON'T
+					-- CURRENTLY, REACTIONS IS THE LAST UI ELEMENT, AND THE ONLY ONE WITH A DISCLOSURE TRIANGLE
+					-- BASICALLY, WE TRY CLICK THE DISCLOSURE TRIANGLE ELEMENT AND IF IT'S NOT THERE
+					-- THEN WE KNOW IT'S NOT THE REACTIONS UI ELEMENTS
+					-- WHEN THE CLICK FAILS, THE UIELEMENTGROUP VARIABLE IS INCREASED UNTIL SUCCESS
+					-- THEN THE UILEMENT GROUP VARIABLE IS USED FOR ADDITIONAL CLICKS
 					
 					set uiElementGroup to 1
 					
+					-- TRY CLICKING THE DISCLOSURE TRIAGE ON UI ELEMENT GROUP 1
 					try
 						tell application "System Events"
 							click UI element 2 of group 1 of group 1 of window "Control Center" of application process "Control Center"
 						end tell
 					end try
 					
+					-- TRY CLICKING THE DISCLOSURE TRIAGE ON UI ELEMENT GROUP 2
 					try
 						tell application "System Events"
 							click UI element 2 of group 2 of group 1 of window "Control Center" of application process "Control Center"
@@ -72,6 +90,7 @@ tell application "System Events"
 						end tell
 					end try
 					
+					-- TRY CLICKING THE DISCLOSURE TRIAGE ON UI ELEMENT GROUP 3
 					try
 						tell application "System Events"
 							click UI element 2 of group 3 of group 1 of window "Control Center" of application process "Control Center"
@@ -79,6 +98,7 @@ tell application "System Events"
 						end tell
 					end try
 					
+					-- TRY CLICKING THE DISCLOSURE TRIAGE ON UI ELEMENT GROUP 4
 					try
 						tell application "System Events"
 							click UI element 2 of group 4 of group 1 of window "Control Center" of application process "Control Center"
@@ -86,14 +106,19 @@ tell application "System Events"
 						end tell
 					end try
 					
+					-- NOTE: IF MAC OS CHANGES THE LOCATION OF THE REACTIONS UI ELEMENT, OR ADDS ADDITIONAL ONES AFTER/BELOW REACTIONS,
+					-- THE ABOVE TRY BLOCKS WILL NEED TO BE REWORKED TO FIND THE RIGHT UI ELEMENT
+					
 					delay 0.1
 					
+					-- CLICK THE DESIRED REACTION
 					tell application "System Events"
 						click UI element reaction of group reactionGroup of group uiElementGroup of group 1 of window "Control Center" of application process "Control Center"
 					end tell
 					
 					delay 0.1
 					
+					-- SIMULATE PRESSING ESCAPE TO CLOSE THE AUDIO AND VIDEO CONTROLS MENU BAR ITEM WINDOW
 					tell application "System Events"
 						key code 53
 					end tell
@@ -107,6 +132,21 @@ tell application "System Events"
 	end tell
 	
 end tell
+
+if foundAudioVideoControlMenuBarItem is false then
+	
+	tell me to activate
+	set theDialogText to "The Audio Video Control menu bar item wasn't found. Make sure there is a running app that is actively using your camera."
+	
+	display dialog theDialogText buttons {"OK"} default button "OK" with title "KeyJerk Reactions" giving up after 30
+	
+end if
 ```
 
+## Is KeyJerk Reactions Free?
+Yes, it's free. Please keep it that way and do not try to resell it. If you want to show your appreciation and give a financial gift to me, you can do so [here](http://buymeacoffee.com/x74353).
+<BR><BR>
 
+## Why is it named KeyJerk Reactions?
+It's a play on words with the phrase "knee-jerk reaction." A knee-jerk reaction is a quick, unthinking, reaction you have to something. "Knee" was changed to "Key" because you can use the keyboard to initiate a macOS Reaction using the script. Clearly, I'm very clever. 😉
+<BR><BR>
