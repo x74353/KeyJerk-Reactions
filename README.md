@@ -53,36 +53,22 @@ tell application "System Events"
 		
 		tell its menu bar 1
 			
-			-- FIND THE AUDIO AND VIDEO CONTROLS MENU BAR ITEM
 			repeat with menuBarItem in every menu bar item
 				
 				if description of menuBarItem is "Audio and Video Controls" then
 					
 					set foundAudioVideoControlMenuBarItem to true
 					
-					-- CLICK THE AUDIO AND VIDEO CONTROLS MENU BAR ITEM
 					click menuBarItem
-					
-					-- SET INITIAL VALUE FOR UI ELEMENT GROUP
-					-- DEPENDING ON WHAT KIND OF MAC/CAMERA IS CONNECTED, THERE MAY BE A DIFFERENT
-					-- NUMBER OF UI ELEMENTS IN THE THE AUDIO AND VIDEO CONTROLS MENU BAR ITEM
-					-- FOR EXAMPLE SOME CAMERAS SUPPORT CENTER STAGE AND PORTRAIT MODE WHILE OTHERS DON'T
-					-- CURRENTLY, REACTIONS IS THE LAST UI ELEMENT, AND THE ONLY ONE WITH A DISCLOSURE TRIANGLE
-					-- BASICALLY, WE TRY CLICK THE DISCLOSURE TRIANGLE ELEMENT AND IF IT'S NOT THERE
-					-- THEN WE KNOW IT'S NOT THE REACTIONS UI ELEMENTS
-					-- WHEN THE CLICK FAILS, THE UIELEMENTGROUP VARIABLE IS INCREASED UNTIL SUCCESS
-					-- THEN THE UILEMENT GROUP VARIABLE IS USED FOR ADDITIONAL CLICKS
 					
 					set uiElementGroup to 1
 					
-					-- TRY CLICKING THE DISCLOSURE TRIAGE ON UI ELEMENT GROUP 1
 					try
 						tell application "System Events"
 							click UI element 2 of group 1 of group 1 of window "Control Center" of application process "Control Center"
 						end tell
 					end try
 					
-					-- TRY CLICKING THE DISCLOSURE TRIAGE ON UI ELEMENT GROUP 2
 					try
 						tell application "System Events"
 							click UI element 2 of group 2 of group 1 of window "Control Center" of application process "Control Center"
@@ -90,7 +76,6 @@ tell application "System Events"
 						end tell
 					end try
 					
-					-- TRY CLICKING THE DISCLOSURE TRIAGE ON UI ELEMENT GROUP 3
 					try
 						tell application "System Events"
 							click UI element 2 of group 3 of group 1 of window "Control Center" of application process "Control Center"
@@ -98,7 +83,6 @@ tell application "System Events"
 						end tell
 					end try
 					
-					-- TRY CLICKING THE DISCLOSURE TRIAGE ON UI ELEMENT GROUP 4
 					try
 						tell application "System Events"
 							click UI element 2 of group 4 of group 1 of window "Control Center" of application process "Control Center"
@@ -106,19 +90,14 @@ tell application "System Events"
 						end tell
 					end try
 					
-					-- NOTE: IF MAC OS CHANGES THE LOCATION OF THE REACTIONS UI ELEMENT, OR ADDS ADDITIONAL ONES AFTER/BELOW REACTIONS,
-					-- THE ABOVE TRY BLOCKS WILL NEED TO BE REWORKED TO FIND THE RIGHT UI ELEMENT
-					
 					delay 0.1
 					
-					-- CLICK THE DESIRED REACTION
 					tell application "System Events"
 						click UI element reaction of group reactionGroup of group uiElementGroup of group 1 of window "Control Center" of application process "Control Center"
 					end tell
 					
 					delay 0.1
 					
-					-- SIMULATE PRESSING ESCAPE TO CLOSE THE AUDIO AND VIDEO CONTROLS MENU BAR ITEM WINDOW
 					tell application "System Events"
 						key code 53
 					end tell
@@ -137,7 +116,6 @@ if foundAudioVideoControlMenuBarItem is false then
 	
 	tell me to activate
 	set theDialogText to "The Audio Video Control menu bar item wasn't found. Make sure there is a running app that is actively using your camera."
-	
 	display dialog theDialogText buttons {"OK"} default button "OK" with title "KeyJerk Reactions" giving up after 30
 	
 end if
