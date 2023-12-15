@@ -3,7 +3,7 @@
 ## What & Why is KeyJerk Reactions?
 Reactions in macOS are buried in the menu bar. Timing is everything. If you have to 1) click the Audio & Video Control menu bar item, 2) click Reactions, and 3) click the reaction you want to use, the effect may be lost as your reaction time was too long.
 
-There are two versions of KeyJerk Reactions. One version is a full-fledged app which runs from the macOS menu bar. The other version is an AppleScript that you can use in conjuntion with other software or hardware, such as Keyboard Maestro or Stream Deck. See more information about how to use the KeyJerk Reactions script below.
+There are two versions of KeyJerk Reactions. One version is a full-fledged app which runs from the macOS menu bar. The other version is an AppleScript that you can use in conjuntion with other software or hardware, such as Keyboard Maestro or Stream Deck. See below for more information about how to use the KeyJerk Reactions script.
 
 In either version KeyJerk Reactions uses AppleScript's UI scripting to quickly perform steps 1, 2, & 3 for you. In the app version, you can assign individual system-wide hot keys for each reaction. KeyJerk Reactions can also prompt you each time to select a reaction via hot key.
 
