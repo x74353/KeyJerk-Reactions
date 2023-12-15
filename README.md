@@ -20,7 +20,7 @@ In either version KeyJerk Reactions uses AppleScript's UI scripting to quickly p
 [Click here](https://github.com/x74353/KeyJerk-Reactions/raw/main/DMG/KeyJerk%20Reactions.dmg) to download the full app's disk image.
 
 ### Script Version
-[Click here](https://github.com/x74353/KeyJerk-Reactions/raw/main/KeyJerk%20Reactions.scpt) to download the AppleScript only.
+[Click here](https://github.com/x74353/KeyJerk-Reactions/raw/main/Script/KeyJerk%20Reactions.scpt) to download the AppleScript only.
 <BR><BR>
 
 ## How to Use the KeyJerk Reactions Script?
