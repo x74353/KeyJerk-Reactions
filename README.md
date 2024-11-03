@@ -44,7 +44,7 @@ KeyJerk Reactions can also integrate with other workflows and automations since 
 ## How to Trigger a Reactions with AppleScript?
 When KeyJerk Reactions is running, you can trigger a Reaction using AppleScript with the following command:
 ```
-Tell application "KeyJerk Reactions" react with "Hearts"
+tell application "KeyJerk Reactions" to react with "Hearts"
 ```
 Reaction titles:
 
