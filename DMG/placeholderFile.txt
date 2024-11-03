@@ -1,0 +1,1 @@
+Placeholder file to keep DMG directory intact when replacing KeyJerk Reactions.dmg file.
