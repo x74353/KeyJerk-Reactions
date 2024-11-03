@@ -18,7 +18,7 @@ KeyJerk Reactions uses macOS Accessibility APIs to control your Mac. When you tr
 • Uses macOS Accessibility APIs instead of AppleScript to trigger Reactions<BR>
 • Compatibility when sharing screen<BR>
 • Non-English language support (additional setup required)<BR>
-• AppleScript support (e.g., Tell application "KeyJerk Reactions" to react with "Hearts")<BR>
+• AppleScript support (e.g., ```tell application "KeyJerk Reactions" to react with "Hearts"```)<BR>
 • Updated user interface and app icon<BR>
 • Closed source<BR>
 
