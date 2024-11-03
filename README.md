@@ -1,3 +1,4 @@
+![alt text](https://raw.githubusercontent.com/x74353/KeyJerk-Reactions/main/images/KeyJerk-Reactions-App-Icon.png)
 # KeyJerk Reactions
 KeyJerk Reactions speeds up choosing a Reaction and makes it so you don't have to perform any gestures in front of the camera. By assigning a system-wide hot key to each macOS Reaction, you can trigger any Reaction immediately, right there in the moment. You can also trigger a Reaction by calling up a HUD using a system-wide hot key where you can quickly choose your desired Reaction. 
 <BR><BR>
