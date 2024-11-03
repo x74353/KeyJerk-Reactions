@@ -43,10 +43,10 @@ To trigger a Reaction, you typically need to perform a gesture in front of your 
 KeyJerk Reactions can also integrate with other workflows and automations since it supports AppleScript. With a simple AppleScript or osascript command, you can trigger a Reaction from another app, workflow, or hardware device such as a Stream Deck.
 <BR><BR>
 
-## How to Trigger a Reactions with AppleScript?
+## How to Trigger a Reaction with AppleScript?
 When KeyJerk Reactions is running, you can trigger a Reaction using AppleScript with the following command:
 ```
-tell application "KeyJerk Reactions" to react with "Hearts"
+tell application "KeyJerk Reactions" to react with "Thumbs-up"
 ```
 Reaction titles:
 
