@@ -1,7 +1,7 @@
 ![alt text](https://raw.githubusercontent.com/x74353/KeyJerk-Reactions/main/images/KeyJerk-Reactions-App-Icon.png)
 
 # KeyJerk Reactions
-KeyJerk Reactions speeds up choosing a Reaction and makes it so you don't have to perform any gestures in front of the camera. By assigning a system-wide hot key to each macOS Reaction, you can trigger any Reaction immediately, right there in the moment. You can also trigger a Reaction by calling up a HUD using a system-wide hot key where you can quickly choose your desired Reaction. 
+KeyJerk Reactions speeds up choosing a Reaction and makes it so you don't have to perform any gestures in front of the camera. By assigning a system-wide hot key to each macOS Reaction, you can trigger any Reaction immediately, right there in the moment. You can also trigger a Reaction by calling up a HUD with a system-wide hot key where you can quickly choose your desired Reaction. 
 <BR><BR>
 
 ## Installation
@@ -67,7 +67,7 @@ Reaction titles:
 <table>
 	<tr>
 		<td valign="middle"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44e_1f3fc/512.gif" alt="👎" width="32" /></td>
-		<td valign="middle" style="width: 75px;">Thumbs-up</td>
+		<td valign="middle" style="width: 75px;">Thumbs-down</td>
 	</tr>
 </table>
 
