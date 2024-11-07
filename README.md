@@ -1,7 +1,7 @@
 ![alt text](https://raw.githubusercontent.com/x74353/KeyJerk-Reactions/main/images/KeyJerk-Reactions-App-Icon.png)
 
 # KeyJerk Reactions
-KeyJerk Reactions speeds up choosing a Reaction and makes it so you don't have to perform any gestures in front of the camera. By assigning a system-wide hot key to each macOS Reaction, you can trigger any Reaction immediately, right there in the moment. You can also trigger a Reaction by calling up a HUD with a system-wide hot key where you can quickly choose your desired Reaction. 
+KeyJerk Reactions speeds up choosing a Reaction and makes it so you don't have to perform any gestures in front of the camera. By assigning a system-wide hot key to each macOS Reaction, you can trigger any Reaction immediately, right there in the moment. You can also trigger a Reaction through AppleScript, Shortcuts, or by calling up a HUD with a system-wide hot key where you can quickly choose your desired Reaction. 
 <BR><BR>
 
 ## Installation
@@ -11,7 +11,7 @@ KeyJerk Reactions speeds up choosing a Reaction and makes it so you don't have t
 <BR><BR>
 
 ## How does it work?
-KeyJerk Reactions uses macOS Accessibility APIs to control your Mac. When you trigger a Reaction with a system-wide hot key or other method, KeyJerk Reactions will quickly click all of the buttons and menus needed to apply the Reaction in the current app that is accessing your Mac's camera.
+KeyJerk Reactions uses macOS Accessibility APIs to control your Mac. When you trigger a Reaction with a system-wide hot key or another method such as AppleScript, Shortcuts, etc., KeyJerk Reactions will quickly click all of the buttons and menus needed to apply the Reaction in the current app that is accessing your Mac's camera.
 <BR><BR>
 
 ## What's New in KeyJerk Reactions 2?
@@ -19,6 +19,8 @@ KeyJerk Reactions uses macOS Accessibility APIs to control your Mac. When you tr
 • Compatibility when sharing screen<BR>
 • Non-English language support (additional setup required)<BR>
 • AppleScript support (e.g., ```tell application "KeyJerk Reactions" to react with "Hearts"```)<BR>
+• Shortcuts support<BR>
+• Option to hide KeyJerk Reactions in menu bar<BR>
 • Updated user interface and app icon<BR>
 • Closed source<BR>
 
@@ -30,7 +32,8 @@ KeyJerk Reactions uses macOS Accessibility APIs to control your Mac. When you tr
 ![alt text](https://raw.githubusercontent.com/x74353/KeyJerk-Reactions/main/images/VideoMenuBarIcon.png)
 
 ### Known Issues/Incompatibilities
-• Incompatible with some 3rd party audio/video system extensions such as ARK/ACE from Rouge Amoeba.
+• Incompatible with some 3rd party audio/video system extensions such as ARK/ACE from Rouge Amoeba.<BR>
+• Attempting to execute the same Reaction repeatedly will not work - a delay of ~5½ seconds in-between duplicate Reactions is required.
 <BR><BR>
 
 # More Information
@@ -38,9 +41,9 @@ KeyJerk Reactions uses macOS Accessibility APIs to control your Mac. When you tr
 ## Why Use KeyJerk Reactions?
 Available in macOS Sonoma and later, Reactions are video effects such as floating hearts or fireworks that can be applied to the camera feed of most, if not all, apps. This includes FaceTime, Zoom, Slack, and many other apps. 
 
-To trigger a Reaction, you typically need to perform a gesture in front of your Mac's camera, such as making a peace sign ✌🏼 or a thumbs-up 👍🏼. Most of the time this works well, though you look kind of silly doing it. When it doesn't work, people might wonder what the heck you're doing flashing peace signs at everyone. Otherwise, to manually trigger a Reaction, you have to click a series of buttons and menu which is a slow and tedious process. By the time you've manually chosen your Reaction, it's too late - the effect is lost. KeyJerk Reactions solves this problem by making triggering a Reaction as quick and simple as pressing a system-wide hot key.
+To trigger a Reaction, you typically need to perform a gesture with your hand(s) in front of your Mac's camera, such as a peace sign ✌🏼 or a thumbs-up 👍🏼. Most of the time this works well, though you look kind of silly while doing it. When it doesn't work, others might wonder what the heck you're doing flashing double peace signs at everyone. To trigger a Reaction without a gesture, you have to click a series of buttons and menus which is a slow and tedious process. By the time you've manually chosen your Reaction, it's too late - the effect is lost. KeyJerk Reactions solves this problem by making triggering a Reaction as quick and simple as pressing a system-wide hot key.
 
-KeyJerk Reactions can also integrate with other workflows and automations since it supports AppleScript. With a simple AppleScript or osascript command, you can trigger a Reaction from another app, workflow, or hardware device such as a Stream Deck.
+KeyJerk Reactions can also integrate with other workflows and automations since it supports AppleScript and Shortcuts. With a simple AppleScript, osascript, or Shortcut you can trigger a Reaction from another app, workflow, or hardware device such as a Stream Deck.
 <BR><BR>
 
 ## How to Trigger a Reaction with AppleScript?
@@ -108,11 +111,11 @@ Reaction titles:
 <BR>
 	
 ## Why is it named KeyJerk Reactions?
-It's a play on words with the phrase "knee-jerk reaction." A knee-jerk reaction is a quick, unthinking, reaction you have to something. "Knee" was changed to "Key" because you can use the keyboard to initiate a macOS Reaction using the script. How clever! 😉
+It's a play on words with the phrase "knee jerk reaction." A knee jerk reaction is a quick, unthinking, reaction you have to something. "Knee" was changed to "Key" because you can use the keyboard to initiate a macOS Reaction using the app. Clever, right? 😑
 <BR><BR>
 
-## Is KeyJerk Reactions Free?
-Yes, it's 100% free. You can download and install KeyJerk Reactions on any compatible Mac for personal use. You may not redistribute for profit or otherwise sell KeyJerk Reactions in any form. There are no advertisements or in-app purchases in KeyJerk Reactions, nor are there any analytics or other 'spyware' type functions. KeyJerk Reactions.app is code-signed with a valid Apple Developer identity and is notarized by Apple.
+## Is KeyJerk Reactions Free & Safe to Use?
+Yes, it's 100% free. You can download and install KeyJerk Reactions on any compatible Mac for personal use. You may not redistribute for profit or otherwise sell KeyJerk Reactions in any form. There are no advertisements or in-app purchases in KeyJerk Reactions, nor are there any analytics or other 'spyware' type functions. KeyJerk Reactions.app is code-signed with a valid Apple Developer ID and is notarized by Apple.
 
 If you want to show your appreciation and give a financial gift to support its development, you can do so [here](http://buymeacoffee.com/x74353).
 <BR><BR>
