@@ -15,25 +15,25 @@ KeyJerk Reactions uses macOS Accessibility APIs to control your Mac. When you tr
 <BR><BR>
 
 ## What's New in KeyJerk Reactions 2?
-• Uses macOS Accessibility APIs instead of AppleScript to trigger Reactions<BR>
-• Compatibility when sharing screen<BR>
-• Non-English language support (additional setup required)<BR>
-• AppleScript support (e.g., ```tell application "KeyJerk Reactions" to react with "Hearts"```)<BR>
-• Shortcuts support<BR>
-• Option to hide KeyJerk Reactions in menu bar<BR>
-• Updated user interface and app icon<BR>
-• Closed source<BR>
+- Uses macOS Accessibility APIs instead of AppleScript to trigger Reactions<BR>
+- Compatibility when sharing screen<BR>
+- Non-English language support (additional setup required)<BR>
+- AppleScript support (e.g., ```tell application "KeyJerk Reactions" to react with "Hearts"```)<BR>
+- Shortcuts support<BR>
+- Option to hide KeyJerk Reactions in menu bar<BR>
+- Updated user interface and app icon<BR>
+- Closed source<BR>
 
 ### Requirements 
-• macOS Sonoma, or newer<BR>
-• macOS Accessibility Features access<BR>
-• macOS Camera access (for non-English setup only)<BR>
-• An app running on your Mac that accesses your Mac's camera and causes the Audio and Video Controls menu bar item to appear:<BR><BR>
+- macOS Sonoma or later, and a Mac with [Apple silicon](https://support.apple.com/en-us/116943) or a Mac using [Continuity Camera](https://support.apple.com/en-us/102546) with iPhone 12 or later
+- macOS Accessibility Features access<BR>
+- macOS Camera access (for non-English setup only)<BR>
+- An app running on your Mac that accesses your Mac's camera and causes the Audio and Video Controls menu bar item to appear:<BR><BR>
 ![alt text](https://raw.githubusercontent.com/x74353/KeyJerk-Reactions/main/images/VideoMenuBarIcon.png)
 
 ### Known Issues/Incompatibilities
-• Incompatible with some 3rd party audio/video system extensions such as ARK/ACE from Rouge Amoeba.<BR>
-• Attempting to execute the same Reaction repeatedly will not work - a delay of ~5½ seconds in-between duplicate Reactions is required.
+- Incompatible with some 3rd party audio/video system extensions such as ARK/ACE from Rouge Amoeba.<BR>
+- Attempting to execute the same Reaction repeatedly will not work - a delay of ~5½ seconds in-between duplicate Reactions is required.
 <BR><BR>
 
 # More Information
