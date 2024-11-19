@@ -33,7 +33,11 @@ KeyJerk Reactions uses macOS Accessibility APIs to control your Mac. When you tr
 
 ### Known Issues/Incompatibilities
 - Incompatible with some 3rd party audio/video system extensions such as ARK/ACE from Rouge Amoeba.<BR>
-- Attempting to execute the same Reaction repeatedly will not work - a delay of ~5½ seconds in-between duplicate Reactions is required.
+- Attempting to execute the same Reaction repeatedly will not work - a delay of ~5½ seconds in-between duplicate Reactions is required.<BR>
+- If your camera does not have "camera" (case insensitive) in its name when displayed in the Audio and Video Controls window, you will need to execute a Terminal command to fix the issue.<BR><BR>Example camera name "MX Brio":
+  ![alt text](https://raw.githubusercontent.com/x74353/KeyJerk-Reactions/main/images/ExternalCamera.png)<BR><BR>
+  Example command to execute in Terminal:<BR>
+  ```defaults write com.if.KeyJerk-Reactions.plist CameraTitle "MX Brio"```
 <BR><BR>
 
 # More Information
