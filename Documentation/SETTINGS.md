@@ -1,6 +1,9 @@
-![alt text](https://raw.githubusercontent.com/x74353/KeyJerk-Reactions/main/images/KeyJerk-Reactions-App-Icon.png)
+![alt text](https://raw.githubusercontent.com/x74353/KeyJerk-Reactions/main/images/KeyJerk-Reactions-App-Icon.png)<BR>
+# KeyJerk Reactions Settings Guide
+#### [Skip to Camera](#camera)
 #### [Skip to App Priorties](#app_priorities)
-
+<a name="camera"></a>
+<BR><BR>
 # Camera
 KeyJerk Reactions looks for a camera connected to your Mac that has the word "camera" (case-insensitive) in its name. If you have an external 3rd party camera, you may need to supply KeyJerk Reactions with your camera's name if it doesn't include the word "camera." Follow these instructions to set up your external camera for use with KeyJerk Reactions.
 
