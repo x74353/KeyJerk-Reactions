@@ -11,7 +11,7 @@ KeyJerk Reactions speeds up choosing a Reaction and makes it so you don't have t
 <BR><BR>
 
 ## How does it work?
-KeyJerk Reactions uses macOS Accessibility APIs to control your Mac. When you trigger a Reaction with a system-wide hot key or another method such as AppleScript, Shortcuts, etc., KeyJerk Reactions will quickly click all of the buttons and menus needed to apply the Reaction in the current app that is accessing your Mac's camera.
+KeyJerk Reactions uses macOS Accessibility APIs to control your Mac. When you trigger a Reaction with a system-wide hot key or another method such as AppleScript, Shortcuts, etc., KeyJerk Reactions will quickly click all of the buttons and menus needed to apply the Reaction in the active/frontmost app that is using your Mac's camera. If the active/frontmost app is not using your Mac's camera, a App Priorities list (configured in Settings) will be used to determine which running app to apply the Reaction in.
 <BR><BR>
 
 ## What's New in KeyJerk Reactions 2?
@@ -24,6 +24,16 @@ KeyJerk Reactions uses macOS Accessibility APIs to control your Mac. When you tr
 - Updated user interface and app icon<BR>
 - Closed source<BR>
 
+### 2.1 Update
+- KeyJerk Reactions now tries to apply macOS Reactions in the active/frontmost app
+- Added App Priorities section in Settings to define which apps to apply macOS Reactions in if active app is not using camera
+- Added Camera section in Settings to define camera name for external 3rd party camera (e.g., MX Brio)
+- Added Stats section in Settings to track most used macOS Reactions
+- Redesigned Settings window
+- Added additional error/alert messages
+- Resolved incompatibility with macOS Audio Extensions such as ARK from Rouge Amoeba
+- Added Documentation link in menu under Feedback/Suppot section 
+
 ### Requirements 
 - macOS Sonoma or later, and a Mac with [Apple silicon](https://support.apple.com/en-us/116943) or a Mac using [Continuity Camera](https://support.apple.com/en-us/102546) with iPhone 12 or later
 - macOS Accessibility Features access<BR>
@@ -32,16 +42,12 @@ KeyJerk Reactions uses macOS Accessibility APIs to control your Mac. When you tr
 ![alt text](https://raw.githubusercontent.com/x74353/KeyJerk-Reactions/main/images/VideoMenuBarIcon.png)
 
 ### Known Issues/Incompatibilities
-- Incompatible with some 3rd party audio/video system extensions such as ARK/ACE from Rouge Amoeba.<BR>
-- Attempting to execute the same Reaction repeatedly will not work - a delay of ~5½ seconds in-between duplicate Reactions is required.<BR>
-- If your camera does not have "camera" (case insensitive) in its name when displayed in the Audio and Video Controls window, you will need to execute a Terminal command to fix the issue.<BR><BR>Example camera name "MX Brio":<BR>
-  ![alt text](https://raw.githubusercontent.com/x74353/KeyJerk-Reactions/main/images/ExternalCamera2.png)<BR><BR>
-  Example command to execute in Terminal:<BR>
-  ```defaults write com.if.KeyJerk-Reactions.plist CameraTitle "MX Brio"```
-<BR><BR>
+- Attempting to execute the same Reaction repeatedly will not work - a delay of ~5½ seconds in-between duplicate Reactions is required.
+<BR><BR><BR>
 
-# More Information
 
+
+# More Information<BR>
 ## Why Use KeyJerk Reactions?
 Available in macOS Sonoma and later, Reactions are video effects such as floating hearts or fireworks that can be applied to the camera feed of most, if not all, apps. This includes FaceTime, Zoom, Slack, and many other apps. 
 
