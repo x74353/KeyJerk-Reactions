@@ -32,7 +32,10 @@ KeyJerk Reactions uses macOS Accessibility APIs to control your Mac. When you tr
 - Redesigned Settings window
 - Added additional error/alert messages
 - Resolved incompatibility with macOS Audio Extensions such as ARK from Rouge Amoeba
-- Added Documentation link in menu under Feedback/Suppot section 
+- Added Documentation link in menu under Feedback/Suppot section
+
+### 2.1.1 Update
+- Fixed an issue that caused the Welcome window to always appear at launch
 
 ### Requirements 
 - macOS Sonoma or later, and a Mac with [Apple silicon](https://support.apple.com/en-us/116943) or a Mac using [Continuity Camera](https://support.apple.com/en-us/102546) with iPhone 12 or later
